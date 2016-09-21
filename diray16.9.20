@@ -1,2 +1,55 @@
 #工作日志2016-9-20#
-1.
+1.学习成果
+  (1).abstract 和 extends搭配使用,实现继承功能.前者用在父类的前面,后者用在子类的前面;
+      如果子类想访问父类的变量和方法,使用super代码.
+  (2).private和get和set搭配使用;
+2.代码
+  (1).main
+        package Pet_Get;
+        import java.util.Scanner;
+        public class Pet_Get0918 {
+	public static void main(String[] args) {
+		System.out.println("请选择宠物:  1.狗    2. 企鹅");
+		Scanner sc1 = new Scanner(System.in);
+		 int change = sc1.nextInt();		
+		}
+        }
+   (2).类1
+        package Pet_Get;
+        public class dog {
+	String name;
+	static int health = 100;
+	static int love = 0;
+	String type;
+
+	public dog(String name, int health, int love,String type) {
+		this.name = name;
+		this.health = health;
+		this.love = love;
+		this.type = type;
+		
+	}
+	public void play(){
+		int result1 = dog.health -10;
+		int result2 = dog.love +5;
+	}
+	}
+   (3).类2
+        package Pet_Get;
+        public class Penguin {
+	String name;
+	String sex;
+	static int health = 100;
+	static int love = 0;
+	
+	public Penguin(String name, String sex, int health, int love) {
+		this.name = name;
+		this.sex = sex;
+		this.health = health;
+		this.love = love;
+	}
+	public void play(){
+	int result1 = Penguin.health -10;
+	int result2 = Penguin.love +5;
+	}
+        }
